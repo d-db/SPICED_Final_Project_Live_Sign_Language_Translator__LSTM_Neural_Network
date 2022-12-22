@@ -39,4 +39,45 @@ Afterwards install the libraries specified in requirements.txt
 ```bash
 pip install -r requirements.txt
 ```
+## Usage
 
+The project contains three major files:
+
+### 1. capture.py
+
+The script is used to record new signs. In the standard settings, you go through 200 iterations with 30 frames each (about 1.5 seconds). The gesture is therefore recorded by the user 200 times. The script automatically creates a structure with 200 folders in which the resulting NumPy arrays are stored.
+
+At the beginning after calling the script, a video of the gesture is recorded once so that the user knows later exactly which gesture it was. The video is stored in the same folder structure like the NumPy arrays.
+
+In order to call up the script correctly via the command line, the must also specify the following information:
+
+1. the name of the gesture
+2. the location where the folder structure is to be created
+
+Example command for a recording of the gesture "Morning" stored in the folder "data".
+
+```bash
+python3 capture.py Morgen ./data/
+```
+Sample video of two iterations recording the German sign "Morning" through capture.py:
+
+https://user-images.githubusercontent.com/61935581/209201751-f65e546a-52ee-4ac3-95dd-285ae002ce4f.mp4
+
+### 2. train_model.ipynb
+
+With this Jupyter notebook the LSTM neural network can be trained and validated.
+
+### 3. main.ipynb
+
+This script combines all relevant functions, loads the LSTM neural network and executes the sign language translation as well as the 'speech-to-text' translation like seen in the introductory video above.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -20,3 +20,23 @@ The English translation of the video content and more details:
 
 - Part 3 (in sign language): "Thank you my name is Daniel"
 (Then follows the German sign for "end", which ends the whole application)
+
+## Acknowledgement
+
+Many thanks to Nicholas Renotte and [his amazing video about 'action recognition' with Googles MediaPipe library](https://www.youtube.com/watch?v=doDUihpj6ro). Without this important inspiration, the project would not have been possible in this form.
+
+## Installation
+
+Clone the repository and create a new virtual environment
+
+```bash
+python3 -m venv envname # to create the virtual env
+source envname/bin/activate # activate it
+```
+
+Afterwards install the libraries specified in requirements.txt
+
+```bash
+pip install -r requirements.txt
+```
+
